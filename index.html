@@ -8,7 +8,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="fonts2/iconfont.css">
-
+    <link rel="stylesheet" href="swiper/swiper-4.1.6.min.css">
+    <script src="swiper/swiper-4.1.6.min.js"></script>
     <script src="better-scroll.js"></script>
 </head>
 
@@ -30,7 +31,24 @@
             </ul>
         </div>
         <section>
-
+            <div class="list">
+                <div class="hot">
+                    <i class="iconfont icon-tongzhi"></i>
+                    <p>热销爆款</p>
+                </div>
+                <div class="sum">
+                    <span>共153款</span>
+                    <i class="iconfont icon-chevron-thin-right"></i>
+                </div>
+            </div>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background:red">1</div>
+                    <div class="swiper-slide" style="background:blue">2</div>
+                    <div class="swiper-slide" style="background:yellow">3</div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
         </section>
         <footer>
             <dl>
@@ -59,6 +77,16 @@
         var myScroll = new BScroll('.nav', {
             scrollX: true
         });
+
+        var mySwiper = new Swiper('.swiper-container', {
+            autoplay: true,
+            pageination: {
+                el: 'swiper-pagination',
+                clickable: true,
+                type: ' bullets'
+            }
+
+        })
     </script>
 </body>
 
